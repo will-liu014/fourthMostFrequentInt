@@ -57,19 +57,11 @@ int fourthFreq(std::string in) {
 	}
 	std::sort(sorted.begin(), sorted.end(), sortFreqDesc);
 
-	int repeats = sorted[0].second, nFreq = 0, value = 0;
 	for (int i = 0; i < sorted.size(); i++) {
-		if (sorted[i].second < repeats) {
-			repeats = sorted[i].second;
-			value = sorted[i].first;
-			nFreq++;
-			if (nFreq == 3) {
-				break;
-			}
-		}
+		std::cout << sorted[i].first << " appears " << sorted[i].second << " time(s)\n";
 	}
 
-	return value;
+	return sorted[3].first;;
 }
 
 int main() {
