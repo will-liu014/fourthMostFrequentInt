@@ -3,11 +3,10 @@
 #include <iostream>
 #include <string>
 #include <algorithm>
-#include <stdexcept>
-#include <limits>
+//#include <stdexcept>
 
-bool sortFreqAsc(const int &x, const int &y) {
-	return (x > y);
+bool sortValueAsc(const int &x, const int &y) {
+	return (x < y);
 }
 
 std::vector<int> parseSort(std::string in) {
@@ -29,7 +28,7 @@ std::vector<int> parseSort(std::string in) {
 		convert = std::stoi(split[i]);
 		parseInt.push_back(convert);
 	}
-	std::sort(parseInt.begin(), parseInt.end(), sortFreqAsc);
+	std::sort(parseInt.begin(), parseInt.end(), sortValueAsc);
 
 	return parseInt;
 }
@@ -57,10 +56,6 @@ int fourthFreq(std::string in) {
 	}
 	std::sort(sorted.begin(), sorted.end(), sortFreqDesc);
 
-	for (int i = 0; i < sorted.size(); i++) {
-		std::cout << sorted[i].first << " appears " << sorted[i].second << " time(s)\n";
-	}
-
 	return sorted[3].first;;
 }
 
@@ -68,5 +63,5 @@ int main() {
 	std::string sequence = "";
 	std::cout << "Please input int using single space as a delimiter (i.e. 4 4 1 2 2 2 2 3 3 3 5 5 5 6 1 5 9)" << "\n\n";
 	std::getline(std::cin, sequence);
-	std::cout << fourthFreq(sequence) << '\n';
+	std::cout << fourthFreq(sequence);
 }
