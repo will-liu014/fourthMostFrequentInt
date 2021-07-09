@@ -1,10 +1,10 @@
-CXX=g++-11
+CXX=g++
 
 all: fourthMostFrequent
 	
 
 fourthMostFrequent:
-	$(CXX) -o fourth fourthMostFrequent.cpp
+	$(CXX) -std=c++11 -o fourth fourthMostFrequent.cpp
 
 clean:
 	rm fourthMostFrequent
