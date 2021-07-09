@@ -1,0 +1,10 @@
+CXX=g++
+
+all: fourthMostFrequent
+	
+fourthMostFrequent:
+
+	$(CXX) -o fourth fourthMostFrequent.cpp
+
+clean:
+	rm fourthMostFrequent
