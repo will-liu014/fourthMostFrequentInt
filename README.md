@@ -1,11 +1,18 @@
 # Finding the Fourth Most Frequent Integer
 
-To run use:
+## Compilation
 
-	g++ -o fourthFrequent fourthMostFrequent.cpp
-	/.fourthFrequent
-	
-Followed by some integer list delimited by a single space between each value.
+```
+make
+```
+
+## Usage
+
+```
+./fourthFrequent
+```
+
+Then, input an integer list delimited by a single space between each value.
 
 ## Task ##
 
