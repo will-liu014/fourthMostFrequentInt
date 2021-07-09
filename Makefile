@@ -1,9 +1,9 @@
-CXX=g++
+CXX=g++-11
 
 all: fourthMostFrequent
 	
-fourthMostFrequent:
 
+fourthMostFrequent:
 	$(CXX) -o fourth fourthMostFrequent.cpp
 
 clean:
